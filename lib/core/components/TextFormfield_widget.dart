@@ -5,27 +5,41 @@ class TextformfieldCustomWidget extends StatefulWidget {
   const TextformfieldCustomWidget({
     super.key,
     required this.hintText,
-      this.isboscureText = false, this.eyeIcon,
+    this.isboscureText = false,
+    this.eyeIcon,
+    required this.ispassword,
   });
 
   final String hintText;
   final bool isboscureText;
   final IconData? eyeIcon;
+  final bool ispassword;
 
   @override
-  State<TextformfieldCustomWidget> createState() => _TextformfieldCustomWidgetState();
+  State<TextformfieldCustomWidget> createState() =>
+      _TextformfieldCustomWidgetState();
 }
 
 class _TextformfieldCustomWidgetState extends State<TextformfieldCustomWidget> {
   bool isboscureText = true;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText:isboscureText ,
+      obscureText: widget.ispassword ? isboscureText : false,
       decoration: InputDecoration(
-        
           hintText: widget.hintText,
-          suffixIcon: isboscureText? IconButton(onPressed: (){}, icon: icon) ,
+          suffixIcon: widget.ispassword
+              ? IconButton(
+                  onPressed: () {
+                    setState(() {
+                      isboscureText = !isboscureText;
+                    });
+                  },
+                  icon: Icon(
+                    isboscureText ? Icons.visibility_off : Icons.visibility,
+                  ))
+              : null,
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide(
