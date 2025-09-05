@@ -1,3 +1,4 @@
+import 'package:ecom_app/core/text_manager.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -8,7 +9,14 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children: [],
+          children: [
+            Text(
+              TextManager.loginTitle,
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            )
+          ],
         ),
       ),
     );
