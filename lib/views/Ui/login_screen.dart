@@ -1,5 +1,6 @@
 import 'package:ecom_app/core/app_colors.dart';
 import 'package:ecom_app/core/components/TextFormfield_widget.dart';
+import 'package:ecom_app/core/components/button_widget.dart';
 import 'package:ecom_app/core/text_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class LoginScreen extends StatelessWidget {
               height: 24,
             ),
             Card(
-              margin: EdgeInsets.all(24),
+              margin: const EdgeInsets.all(24),
               color: AppColors.kWhiteColor,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
@@ -46,6 +47,10 @@ class LoginScreen extends StatelessWidget {
                       ispassword: true,
                       labeltText: TextManager.password,
                     ),
+                    SizedBox(
+                      height: 24,
+                    ),
+                    CustomBtnWidget(),
                   ],
                 ),
               ),
