@@ -1,3 +1,4 @@
+import 'package:ecom_app/core/app_colors.dart';
 import 'package:ecom_app/core/text_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -9,11 +10,22 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               TextManager.loginTitle,
               style: TextStyle(
                 fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 24,
+            ),
+            Card(
+              color: AppColors.kWhiteColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
               ),
             )
           ],
