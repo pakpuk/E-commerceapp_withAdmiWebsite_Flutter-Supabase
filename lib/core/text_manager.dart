@@ -7,4 +7,5 @@ class TextManager {
   static const String namehint = "Full Name";
   static const String email = 'Email';
   static const String password = 'Password';
+  static const String forgetpassword = 'Forget Password ?';
 }

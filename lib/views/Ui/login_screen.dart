@@ -50,6 +50,17 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       height: 24,
                     ),
+                    Align(
+                        alignment: Alignment.topRight,
+                        child: Text(
+                          TextManager.forgetpassword,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.kPrimaryColor),
+                        )),
+                    SizedBox(
+                      height: 24,
+                    ),
                     CustomBtnWidget(),
                   ],
                 ),
