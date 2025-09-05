@@ -1,6 +1,5 @@
 import 'package:ecom_app/core/app_colors.dart';
 import 'package:ecom_app/core/components/TextFormfield_widget.dart';
-import 'package:ecom_app/core/components/button_widget.dart';
 import 'package:ecom_app/core/text_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +29,7 @@ class LoginScreen extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: const Padding(
+              child: Padding(
                 padding: EdgeInsets.all(16),
                 child: Column(
                   children: [
@@ -59,9 +58,32 @@ class LoginScreen extends StatelessWidget {
                               color: AppColors.kPrimaryColor),
                         )),
                     SizedBox(
-                      height: 24,
+                      height: 18,
                     ),
-                    CustomBtnWidget(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(TextManager.login),
+                        InkWell(
+                          child: Container(
+                            height: 40,
+                            width: 60,
+                            decoration: BoxDecoration(
+                              color: AppColors.kPrimaryColor,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12),
+                              ),
+                            ),
+                            child: Center(
+                              child: Icon(
+                                Icons.arrow_right_alt,
+                                color: AppColors.kWhiteColor,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),
