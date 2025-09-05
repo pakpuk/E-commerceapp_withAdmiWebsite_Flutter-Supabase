@@ -27,6 +27,9 @@ class LoginScreen extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
+              child: Column(
+                children: [],
+              ),
             )
           ],
         ),
