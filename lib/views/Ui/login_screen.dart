@@ -1,4 +1,5 @@
 import 'package:ecom_app/core/app_colors.dart';
+import 'package:ecom_app/core/components/TextFormfield_widget.dart';
 import 'package:ecom_app/core/text_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +29,15 @@ class LoginScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Column(
-                children: [],
+                children: [
+                  TextformfieldCustomWidget(
+                      hintText: TextManager.emailhint, ispassword: false),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextformfieldCustomWidget(
+                      hintText: TextManager.passwordhint, ispassword: true),
+                ],
               ),
             )
           ],
