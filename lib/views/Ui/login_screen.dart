@@ -30,26 +30,26 @@ class LoginScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Padding(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 child: Column(
                   children: [
-                    TextformfieldCustomWidget(
+                    const TextformfieldCustomWidget(
                       hintText: TextManager.emailhint,
                       ispassword: false,
                       labeltText: TextManager.email,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    TextformfieldCustomWidget(
+                    const TextformfieldCustomWidget(
                       hintText: TextManager.passwordhint,
                       ispassword: true,
                       labeltText: TextManager.password,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
-                    Align(
+                    const Align(
                         alignment: Alignment.topRight,
                         child: Text(
                           TextManager.forgetpassword,
@@ -57,7 +57,7 @@ class LoginScreen extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                               color: AppColors.kPrimaryColor),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 18,
                     ),
                     Row(
@@ -65,6 +65,7 @@ class LoginScreen extends StatelessWidget {
                       children: [
                         Text(TextManager.login),
                         InkWell(
+                          onTap: () {},
                           child: Container(
                             height: 40,
                             width: 60,
