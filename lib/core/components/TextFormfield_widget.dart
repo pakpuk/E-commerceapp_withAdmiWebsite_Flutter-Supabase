@@ -8,12 +8,14 @@ class TextformfieldCustomWidget extends StatefulWidget {
     this.isboscureText = false,
     this.eyeIcon,
     required this.ispassword,
+    required this.labeltText,
   });
 
   final String hintText;
   final bool isboscureText;
   final IconData? eyeIcon;
   final bool ispassword;
+  final String labeltText;
 
   @override
   State<TextformfieldCustomWidget> createState() =>
@@ -34,6 +36,7 @@ class _TextformfieldCustomWidgetState extends State<TextformfieldCustomWidget> {
       },
       obscureText: widget.ispassword ? isboscureText : false,
       decoration: InputDecoration(
+          labelText: widget.labeltText,
           hintText: widget.hintText,
           suffixIcon: widget.ispassword
               ? IconButton(
@@ -48,17 +51,17 @@ class _TextformfieldCustomWidgetState extends State<TextformfieldCustomWidget> {
               : null,
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: AppColors.kBordersideColor,
               )),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: AppColors.kBordersideColor,
               )),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: AppColors.kPrimaryColor,
                 width: 2,
               ))),
