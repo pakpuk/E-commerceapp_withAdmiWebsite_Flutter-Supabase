@@ -34,12 +34,18 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     TextformfieldCustomWidget(
-                        hintText: TextManager.emailhint, ispassword: false),
+                      hintText: TextManager.emailhint,
+                      ispassword: false,
+                      labeltText: TextManager.email,
+                    ),
                     SizedBox(
                       height: 10,
                     ),
                     TextformfieldCustomWidget(
-                        hintText: TextManager.passwordhint, ispassword: true),
+                      hintText: TextManager.passwordhint,
+                      ispassword: true,
+                      labeltText: TextManager.password,
+                    ),
                   ],
                 ),
               ),
