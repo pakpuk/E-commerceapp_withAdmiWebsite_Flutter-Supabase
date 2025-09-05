@@ -26,6 +26,12 @@ class _TextformfieldCustomWidgetState extends State<TextformfieldCustomWidget> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return " This  is a required field";
+        }
+        return null;
+      },
       obscureText: widget.ispassword ? isboscureText : false,
       decoration: InputDecoration(
           hintText: widget.hintText,

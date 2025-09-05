@@ -13,31 +13,35 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               TextManager.loginTitle,
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 24,
             ),
             Card(
+              margin: EdgeInsets.all(24),
               color: AppColors.kWhiteColor,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Column(
-                children: [
-                  TextformfieldCustomWidget(
-                      hintText: TextManager.emailhint, ispassword: false),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  TextformfieldCustomWidget(
-                      hintText: TextManager.passwordhint, ispassword: true),
-                ],
+              child: const Padding(
+                padding: EdgeInsets.all(16),
+                child: Column(
+                  children: [
+                    TextformfieldCustomWidget(
+                        hintText: TextManager.emailhint, ispassword: false),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextformfieldCustomWidget(
+                        hintText: TextManager.passwordhint, ispassword: true),
+                  ],
+                ),
               ),
             )
           ],
