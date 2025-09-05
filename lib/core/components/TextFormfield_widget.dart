@@ -53,7 +53,8 @@ class _TextformfieldCustomWidgetState extends State<TextformfieldCustomWidget> {
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide(
-                color: AppColors.kBordersideColor,
+                color: AppColors.kPrimaryColor,
+                width: 2,
               ))),
     );
   }
