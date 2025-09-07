@@ -5,6 +5,10 @@ class CustomBtnWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      height: 72,
+      width: double.infinity,
+      decoration: BoxDecoration(),
+    );
   }
 }
