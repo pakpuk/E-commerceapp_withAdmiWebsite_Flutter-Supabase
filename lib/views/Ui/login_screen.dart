@@ -49,14 +49,17 @@ class LoginScreen extends StatelessWidget {
                     const SizedBox(
                       height: 24,
                     ),
-                    const Align(
+                     Align(
                         alignment: Alignment.centerRight,
-                        child: Text(
-                          TextManager.forgetpassword,
-                          style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.kPrimaryColor,
-                            fontSize: 18,
+                        child: GestureDetector(
+                          onTap: (){},
+                          child: Text(
+                            TextManager.forgetpassword,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.kPrimaryColor,
+                              fontSize: 18,
+                            ),
                           ),
                         )),
                     const SizedBox(
@@ -115,6 +118,8 @@ class LoginScreen extends StatelessWidget {
                         )
                       ],
                     ),
+                    SizedBox( height: 12,),
+                    RichText(text: )
                   ],
                 ),
               ),
