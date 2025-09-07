@@ -10,4 +10,5 @@ class TextManager {
   static const String email = 'Email';
   static const String password = 'Password';
   static const String forgetpassword = 'Forget Password ?';
+  static const String googlelogin = 'Login with google';
 }

@@ -84,7 +84,35 @@ class LoginScreen extends StatelessWidget {
                           ),
                         )
                       ],
-                    )
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(TextManager.googlelogin),
+                        InkWell(
+                          onTap: () {},
+                          child: Container(
+                            height: 40,
+                            width: 60,
+                            decoration: BoxDecoration(
+                              color: AppColors.kPrimaryColor,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(12),
+                              ),
+                            ),
+                            child: Center(
+                              child: Icon(
+                                Icons.arrow_right_alt,
+                                color: AppColors.kWhiteColor,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ],
                 ),
               ),
