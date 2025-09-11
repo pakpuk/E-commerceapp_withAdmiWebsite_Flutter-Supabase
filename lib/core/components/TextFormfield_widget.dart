@@ -9,7 +9,7 @@ class TextformfieldCustomWidget extends StatefulWidget {
     this.eyeIcon,
     required this.ispassword,
     required this.labeltText,
-    required this.validator,
+    this.validator,
   });
 
   final String hintText;
@@ -17,7 +17,7 @@ class TextformfieldCustomWidget extends StatefulWidget {
   final IconData? eyeIcon;
   final bool ispassword;
   final String labeltText;
-  final VoidCallback validator;
+  final FormFieldValidator<String>? validator;
 
   @override
   State<TextformfieldCustomWidget> createState() =>
@@ -30,7 +30,7 @@ class _TextformfieldCustomWidgetState extends State<TextformfieldCustomWidget> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      validator: validator
+      validator: widget.validator,
       obscureText: widget.ispassword ? isboscureText : false,
       decoration: InputDecoration(
           labelText: widget.labeltText,
