@@ -38,6 +38,14 @@ class LoginScreen extends StatelessWidget {
                         hintText: TextManager.emailhint,
                         ispassword: false,
                         labeltText: TextManager.email,
+                        validator: (value){
+                          if (value == null || value.isEmpty){
+                            return 'this is required  field ';
+                          } if ( !value.contains '@'){
+ return 'Enter a valid email';
+                          }
+                          return null;
+                        },
                       ),
                       const SizedBox(
                         height: 10,

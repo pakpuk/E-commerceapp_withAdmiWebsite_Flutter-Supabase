@@ -17,7 +17,7 @@ class TextformfieldCustomWidget extends StatefulWidget {
   final IconData? eyeIcon;
   final bool ispassword;
   final String labeltText;
-  final FormFieldValidator<String>? validator;
+  final String? Function(String?)? validator;
 
   @override
   State<TextformfieldCustomWidget> createState() =>
