@@ -39,13 +39,13 @@ class LoginScreen extends StatelessWidget {
                         ispassword: false,
                         labeltText: TextManager.email,
                         validator: (value){
-                          if (value == null || value.isEmpty){
-                            return 'this is required  field ';
-                          } if ( !value.contains '@'){
- return 'Enter a valid email';
+                          if(value == null||value.isEmpty){
+                            return   'This is a required field';
+                          } if (!value.contains('@')){
+                            'Please enter a valid email';
                           }
                           return null;
-                        },
+                        }
                       ),
                       const SizedBox(
                         height: 10,
