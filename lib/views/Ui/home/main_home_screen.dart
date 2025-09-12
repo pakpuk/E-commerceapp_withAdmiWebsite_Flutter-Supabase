@@ -41,15 +41,15 @@ class MainHomeScreen extends StatelessWidget {
               text: 'Home',
             ),
             GButton(
-              icon: Icons.heart_broken_outlined,
+              icon: Icons.store,
               text: 'Likes',
             ),
             GButton(
-              icon: Icons.search,
+              icon: Icons.favorite,
               text: 'Search',
             ),
             GButton(
-              icon: Icons.supervised_user_circle,
+              icon: Icons.person,
               text: 'Profile',
             )
           ]),
