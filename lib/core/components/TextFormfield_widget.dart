@@ -10,6 +10,7 @@ class TextformfieldCustomWidget extends StatefulWidget {
     required this.ispassword,
     required this.labeltText,
     this.validator,
+    required this.controller,
   });
 
   final String hintText;
@@ -18,6 +19,7 @@ class TextformfieldCustomWidget extends StatefulWidget {
   final bool ispassword;
   final String labeltText;
   final String? Function(String?)? validator;
+  final TextEditingController controller;
 
   @override
   State<TextformfieldCustomWidget> createState() =>
@@ -30,6 +32,7 @@ class _TextformfieldCustomWidgetState extends State<TextformfieldCustomWidget> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: widget.controller,
       validator: widget.validator,
       obscureText: widget.ispassword ? isboscureText : false,
       decoration: InputDecoration(

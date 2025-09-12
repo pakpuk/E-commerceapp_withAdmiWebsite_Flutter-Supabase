@@ -4,8 +4,9 @@ import 'package:ecom_app/core/text_manager.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
-
+  LoginScreen({super.key});
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,34 +35,48 @@ class LoginScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(16),
                   child: Column(
                     children: [
-                      const TextformfieldCustomWidget(
+                      TextformfieldCustomWidget(
                         hintText: TextManager.emailhint,
                         ispassword: false,
                         labeltText: TextManager.email,
-                        validator: (value){
-                          if(value == null||value.isEmpty){
-                            return   'This is a required field';
-                          } if (!value.contains('@')){
-                            'Please enter a valid email';
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Email is required';
+                          }
+                          final emailRegex = RegExp(
+                              r'^[^@\s]+@[^@\s]+\.[^@\s]+$'); // simple email regex
+                          if (!emailRegex.hasMatch(value)) {
+                            return 'Enter a valid email';
                           }
                           return null;
-                        }
+                        },
+                        controller: emailController,
                       ),
                       const SizedBox(
                         height: 10,
                       ),
-                      const TextformfieldCustomWidget(
+                      TextformfieldCustomWidget(
                         hintText: TextManager.passwordhint,
                         ispassword: true,
                         labeltText: TextManager.password,
+                        controller: passwordController,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'This is a required field';
+                          }
+                          if (value.length < 8) {
+                            return "pleas enter a valid password";
+                          }
+                          return null;
+                        },
                       ),
                       const SizedBox(
                         height: 24,
                       ),
-                       Align(
+                      Align(
                           alignment: Alignment.centerRight,
                           child: GestureDetector(
-                            onTap: (){},
+                            onTap: () {},
                             child: Text(
                               TextManager.forgetpassword,
                               style: TextStyle(
@@ -127,8 +142,21 @@ class LoginScreen extends StatelessWidget {
                           )
                         ],
                       ),
-                      SizedBox( height: 12,),
-                      RichText(text: )
+                      SizedBox(
+                        height: 12,
+                      ),
+                      RichText(
+                        text: TextSpan(
+                            text: TextManager.donthaveacc,
+                            style: TextStyle(fontWeight: FontWeight.w500),
+                            children: [
+                              TextSpan(
+                                  text: TextManager.signup,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      color: AppColors.kPrimaryColor))
+                            ]),
+                      )
                     ],
                   ),
                 ),
