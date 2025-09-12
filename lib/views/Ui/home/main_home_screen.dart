@@ -1,10 +1,19 @@
 import 'package:ecom_app/core/app_colors.dart';
+import 'package:ecom_app/views/Ui/favorites_screen.dart';
+import 'package:ecom_app/views/Ui/home/home_screen.dart';
+import 'package:ecom_app/views/Ui/profile_screen.dart';
+import 'package:ecom_app/views/Ui/store_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class MainHomeScreen extends StatelessWidget {
-  const MainHomeScreen({super.key});
-
+  MainHomeScreen({super.key});
+  final List<Widget> screens = [
+    HomeScreen(),
+    StoreScreen(),
+    FavoriteScreen(),
+    ProfileScreen()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
