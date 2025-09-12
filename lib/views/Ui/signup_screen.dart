@@ -94,9 +94,7 @@ class SignupScreen extends StatelessWidget {
                           if (value == null || value.isEmpty) {
                             return 'This is a required field';
                           }
-                          if (value.length < 8) {
-                            return "pleas enter a valid password";
-                          } else if (value != passwordcontroller.text) {
+                          if (value != passwordcontroller.text) {
                             return "Password does  not  match ";
                           }
                           return null;
