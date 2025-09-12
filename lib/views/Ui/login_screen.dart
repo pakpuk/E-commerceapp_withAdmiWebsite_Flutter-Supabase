@@ -1,6 +1,8 @@
 import 'package:ecom_app/core/app_colors.dart';
 import 'package:ecom_app/core/components/TextFormfield_widget.dart';
+import 'package:ecom_app/core/extensions/navigator_route.dart';
 import 'package:ecom_app/core/text_manager.dart';
+import 'package:ecom_app/views/Ui/home/main_home_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -122,7 +124,9 @@ class LoginScreen extends StatelessWidget {
                         children: [
                           Text(TextManager.googlelogin),
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              context.push(MainHomeScreen());
+                            },
                             child: Container(
                               height: 40,
                               width: 60,
