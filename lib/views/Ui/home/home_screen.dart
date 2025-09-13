@@ -1,5 +1,5 @@
-import 'package:ecom_app/core/app_colors.dart';
 import 'package:ecom_app/core/components/custom_search_field.dart';
+import 'package:ecom_app/core/components/store_categories.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -16,6 +16,13 @@ class HomeScreen extends StatelessWidget {
             height: 18,
           ),
           Image.asset("name"),
+          SizedBox(
+            height: 18,
+          ),
+          ListView.builder(
+            itemBuilder: Categoriewidget(),
+            scrollDirection: Axis.horizontal,
+          )
         ],
       ),
     );
