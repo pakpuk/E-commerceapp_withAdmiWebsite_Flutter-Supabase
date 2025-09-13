@@ -6,7 +6,7 @@ class TextformfieldCustomWidget extends StatefulWidget {
     super.key,
     required this.hintText,
     this.isboscureText = false,
-    this.eyeIcon,
+    this.suffixicon,
     required this.ispassword,
     this.labeltText,
     this.validator,
@@ -15,7 +15,7 @@ class TextformfieldCustomWidget extends StatefulWidget {
 
   final String hintText;
   final bool isboscureText;
-  final IconData? eyeIcon;
+  final IconData? suffixicon;
   final bool ispassword;
   final String? labeltText;
   final String? Function(String?)? validator;
