@@ -30,36 +30,7 @@ class HomeScreen extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: categories.length,
-              itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    CircleAvatar(
-                      radius: 32,
-                      backgroundColor: AppColors.kPrimaryColor,
-                      foregroundColor: AppColors.kPrimaryColor,
-                      child: Icon(
-                        categories[index].icon,
-                        size: 38,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      categories[index].title,
-                      style: TextStyle(
-                        fontSize: 12,
-                      ),
-                    )
-                  ],
-                );
-              },
-              scrollDirection: Axis.horizontal,
-            ),
-          )
+          const Categoriewidget(),
         ],
       ),
     );
