@@ -15,4 +15,11 @@ class TextManager {
   static const String donthaveacc = 'You dont have an account?';
   static const String searchbartxt = 'Search in Market...';
   static const String pproductstxt = 'Popualr Products';
+
+//hedo  t3category model
+  static const sporttxt = "Sport";
+  static const electronictxt = "Elictronics";
+  static const collectiontxt = "Collections";
+  static const gamestxt = "Games";
+  static const booktxt = "Books";
 }
