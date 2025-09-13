@@ -1,3 +1,4 @@
+import 'package:ecom_app/core/app_colors.dart';
 import 'package:ecom_app/core/components/custom_search_field.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,13 @@ class HomeScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(12),
       child: ListView(
-        children: [CustomSearchfield(fieldcontroller: fieldcontroller)],
+        children: [
+          CustomSearchfield(fieldcontroller: fieldcontroller),
+          SizedBox(
+            height: 18,
+          ),
+          Image.asset("name"),
+        ],
       ),
     );
   }
