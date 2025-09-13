@@ -14,4 +14,5 @@ class TextManager {
   static const String haveacc = 'You already have an account?';
   static const String donthaveacc = 'You dont have an account?';
   static const String searchbartxt = 'Search in Market...';
+  static const String pproductstxt = 'Popualr Products';
 }
