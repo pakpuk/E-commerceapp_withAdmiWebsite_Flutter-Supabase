@@ -8,7 +8,7 @@ class TextformfieldCustomWidget extends StatefulWidget {
     this.isboscureText = false,
     this.eyeIcon,
     required this.ispassword,
-    required this.labeltText,
+    this.labeltText,
     this.validator,
     required this.controller,
   });
@@ -17,7 +17,7 @@ class TextformfieldCustomWidget extends StatefulWidget {
   final bool isboscureText;
   final IconData? eyeIcon;
   final bool ispassword;
-  final String labeltText;
+  final String? labeltText;
   final String? Function(String?)? validator;
   final TextEditingController controller;
 

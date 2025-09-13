@@ -13,4 +13,5 @@ class TextManager {
   static const String googlelogin = 'Login with google';
   static const String haveacc = 'You already have an account?';
   static const String donthaveacc = 'You dont have an account?';
+  static const String searchbartxt = 'Search in Market...';
 }
