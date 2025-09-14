@@ -82,7 +82,12 @@ class ProductCard extends StatelessWidget {
                       Text("data"),
                     ],
                   ),
-                  CustomBtnWidget(),
+                  CustomBtnWidget(
+                    width: 100,
+                    backgroundColor: AppColors.kPrimaryColor,
+                    onTap: () {},
+                    title: 'Buy Now',
+                  ),
                 ],
               )
             ],
