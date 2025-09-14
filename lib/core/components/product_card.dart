@@ -14,6 +14,42 @@ class ProductCard extends StatelessWidget {
       child: Column(
         children: [
           Stack(
+            children: [
+              ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(12),
+                    bottomRight: Radius.circular(12),
+                    bottomLeft: Radius.circular(12),
+                  ),
+                  child: Image(
+                    image: NetworkImage("url"),
+                    fit: BoxFit.cover,
+                  )),
+              Positioned(
+                child: Container(
+                  height: 52,
+                  width: 72,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: AppColors.kPrimaryColor,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "20%",
+                      style: TextStyle(
+                        color: AppColors.kWhiteColor,
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+          SizedBox(
+            height: 12,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [],
           ),
         ],
