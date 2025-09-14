@@ -2,8 +2,8 @@ import 'package:ecom_app/core/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
-  const ProductCard({super.key});
-
+  ProductCard({super.key, required this.isfavorite});
+  final bool isfavorite;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -53,7 +53,15 @@ class ProductCard extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [],
+            children: [
+              Text('data'),
+              IconButton(
+                  onPressed: () {},
+                  icon: isfavorite
+                      ? Icon(Icons.favorite)
+                      : Icon(Icons.favorite_outlined,
+                          color: AppColors.KRedColor))
+            ],
           ),
         ],
       ),
