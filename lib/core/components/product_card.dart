@@ -1,4 +1,5 @@
 import 'package:ecom_app/core/app_colors.dart';
+import 'package:ecom_app/core/components/button_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
@@ -61,11 +62,29 @@ class ProductCard extends StatelessWidget {
             children: [
               Text('data'),
               IconButton(
-                  onPressed: () {},
+                  onPressed: onTap,
                   icon: isfavorite
-                      ? Icon(Icons.favorite)
+                      ? Icon(Icons.favorite_border)
                       : Icon(Icons.favorite_outlined,
-                          color: AppColors.KRedColor))
+                          color: AppColors.KRedColor)),
+              SizedBox(
+                height: 12,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      Text(""),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Text("data"),
+                    ],
+                  ),
+                  CustomBtnWidget(),
+                ],
+              )
             ],
           ),
         ],
