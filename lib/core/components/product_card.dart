@@ -2,8 +2,13 @@ import 'package:ecom_app/core/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
-  ProductCard({super.key, required this.isfavorite});
+  ProductCard({
+    super.key,
+    required this.isfavorite,
+    required this.onTap,
+  });
   final bool isfavorite;
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
