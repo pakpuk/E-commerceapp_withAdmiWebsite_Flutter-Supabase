@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ecom_app/core/app_colors.dart';
 import 'package:ecom_app/core/components/button_widget.dart';
 import 'package:flutter/material.dart';
@@ -22,15 +23,25 @@ class ProductCard extends StatelessWidget {
           Stack(
             children: [
               ClipRRect(
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(12),
-                    bottomRight: Radius.circular(12),
-                    bottomLeft: Radius.circular(12),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(12),
+                  bottomRight: Radius.circular(12),
+                  bottomLeft: Radius.circular(12),
+                ),
+                child: CachedNetworkImage(
+                  imageUrl: "url",
+                  progressIndicatorBuilder: (context, url, downloadProgress) =>
+                      SizedBox(
+                    height: 200,
+                    child: Center(
+                      child: CircularProgressIndicator(
+                          color: AppColors.kPrimaryColor,
+                          value: downloadProgress.progress),
+                    ),
                   ),
-                  child: Image(
-                    image: NetworkImage("url"),
-                    fit: BoxFit.cover,
-                  )),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
+                ),
+              ),
               Positioned(
                 child: Container(
                   height: 52,
