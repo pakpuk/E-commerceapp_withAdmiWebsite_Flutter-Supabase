@@ -15,11 +15,11 @@ class HomeScreen extends StatelessWidget {
       child: ListView(
         children: [
           CustomSearchfield(fieldcontroller: fieldcontroller),
-          SizedBox(
+          const SizedBox(
             height: 18,
           ),
           Image.asset("name"),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
           const Text(
@@ -31,11 +31,11 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const Categoriewidget(),
-          SizedBox(
+          const SizedBox(
             height: 18,
           ),
-          Text(TextManager.recentlyaddedtxt),
-          SizedBox(
+          const Text(TextManager.recentlyaddedtxt),
+          const SizedBox(
             height: 12,
           ),
           ListView.builder(
