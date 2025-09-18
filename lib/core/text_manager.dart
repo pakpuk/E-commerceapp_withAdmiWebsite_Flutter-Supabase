@@ -15,6 +15,7 @@ class TextManager {
   static const String donthaveacc = 'You dont have an account?';
   static const String searchbartxt = 'Search in Market...';
   static const String pproductstxt = 'Popualr Products';
+  static const String recentlyaddedtxt = 'Recently added';
 
 //hedo  t3category model
   static const sporttxt = "Sport";

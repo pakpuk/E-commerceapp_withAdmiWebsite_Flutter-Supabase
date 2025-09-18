@@ -34,6 +34,7 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 18,
           ),
+          Text(TextManager.recentlyaddedtxt),
           ProductCard(isfavorite: false, onTap: () {})
         ],
       ),
