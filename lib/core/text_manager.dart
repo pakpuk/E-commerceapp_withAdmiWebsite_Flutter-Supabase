@@ -16,6 +16,7 @@ class TextManager {
   static const String searchbartxt = 'Search in Market...';
   static const String pproductstxt = 'Popualr Products';
   static const String recentlyaddedtxt = 'Recently added';
+  static const String wlcmtext = 'Welcom To Our Market';
 
 //hedo  t3category model
   static const sporttxt = "Sport";
