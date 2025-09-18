@@ -1,6 +1,6 @@
 import 'package:ecom_app/core/app_colors.dart';
+import 'package:ecom_app/core/components/Product_List.dart';
 import 'package:ecom_app/core/components/custom_search_field.dart';
-import 'package:ecom_app/core/components/product_card.dart';
 import 'package:ecom_app/core/components/store_categories.dart';
 import 'package:ecom_app/core/text_manager.dart';
 import 'package:flutter/material.dart';
@@ -38,14 +38,7 @@ class HomeScreen extends StatelessWidget {
           const SizedBox(
             height: 12,
           ),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemCount: 2,
-            itemBuilder: (context, index) {
-              return ProductCard(isfavorite: false, onTap: () {});
-            },
-          )
+          ProudctList()
         ],
       ),
     );
