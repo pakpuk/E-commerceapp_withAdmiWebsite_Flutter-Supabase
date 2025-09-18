@@ -1,5 +1,6 @@
 import 'package:ecom_app/core/app_colors.dart';
 import 'package:ecom_app/core/components/custom_search_field.dart';
+import 'package:ecom_app/core/components/product_card.dart';
 import 'package:ecom_app/core/components/store_categories.dart';
 import 'package:ecom_app/core/text_manager.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,10 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const Categoriewidget(),
+          SizedBox(
+            height: 18,
+          ),
+          ProductCard(isfavorite: false, onTap: () {})
         ],
       ),
     );
