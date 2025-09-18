@@ -38,7 +38,9 @@ class HomeScreen extends StatelessWidget {
           const SizedBox(
             height: 12,
           ),
-          ProudctList()
+          ProudctList(
+            onTap: () {},
+          )
         ],
       ),
     );
