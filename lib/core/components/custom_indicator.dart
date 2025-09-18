@@ -1,3 +1,4 @@
+import 'package:ecom_app/core/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomCircleIndicator extends StatelessWidget {
@@ -7,6 +8,9 @@ class CustomCircleIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: CircularProgressIndicator());
+    return const Center(
+        child: CircularProgressIndicator(
+      color: AppColors.kGreyColor,
+    ));
   }
 }
