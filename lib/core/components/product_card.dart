@@ -30,15 +30,8 @@ class ProductCard extends StatelessWidget {
                 ),
                 child: CachedNetworkImage(
                   imageUrl: "url",
-                  progressIndicatorBuilder: (context, url, downloadProgress) =>
-                      SizedBox(
-                    height: 200,
-                    child: Center(
-                      child: CircularProgressIndicator(
-                          color: AppColors.kPrimaryColor,
-                          value: downloadProgress.progress),
-                    ),
-                  ),
+                  placeholder: (context, url) =>
+                      SizedBox(height: 200, child: CustomCircleIndicator()),
                   errorWidget: (context, url, error) => Icon(Icons.error),
                 ),
               ),
@@ -106,5 +99,16 @@ class ProductCard extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class CustomCircleIndicator extends StatelessWidget {
+  const CustomCircleIndicator({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: CircularProgressIndicator());
   }
 }
