@@ -35,7 +35,15 @@ class HomeScreen extends StatelessWidget {
             height: 18,
           ),
           Text(TextManager.recentlyaddedtxt),
-          ProductCard(isfavorite: false, onTap: () {})
+          SizedBox(
+            height: 12,
+          ),
+          ListView.builder(
+            itemCount: 2,
+            itemBuilder: (BuildContext context, int index) {
+              return ProductCard(isfavorite: false, onTap: () {});
+            },
+          )
         ],
       ),
     );
