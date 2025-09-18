@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ecom_app/core/app_colors.dart';
 import 'package:ecom_app/core/components/button_widget.dart';
+import 'package:ecom_app/core/components/custom_indicator.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
@@ -101,16 +102,5 @@ class ProductCard extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-
-class CustomCircleIndicator extends StatelessWidget {
-  const CustomCircleIndicator({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: CircularProgressIndicator());
   }
 }
