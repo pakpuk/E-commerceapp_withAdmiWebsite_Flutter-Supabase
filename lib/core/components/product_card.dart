@@ -23,19 +23,14 @@ class ProductCard extends StatelessWidget {
         children: [
           Stack(
             children: [
-              ClipRRect(
-                borderRadius: const BorderRadius.only(
+              const ClipRRect(
+                borderRadius: BorderRadius.only(
                   topRight: Radius.circular(12),
                   bottomRight: Radius.circular(12),
                   bottomLeft: Radius.circular(12),
                 ),
-                child: CachedNetworkImage(
-                  imageUrl: "url",
-                  placeholder: (context, url) => const SizedBox(
-                    height: 200,
-                    child: CustomCircleIndicator(),
-                  ),
-                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                child: CacheImage(
+                  url: '',
                 ),
               ),
               Positioned(
@@ -101,6 +96,25 @@ class ProductCard extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class CacheImage extends StatelessWidget {
+  const CacheImage({
+    super.key,
+    required this.url,
+  });
+  final String url;
+  @override
+  Widget build(BuildContext context) {
+    return CachedNetworkImage(
+      imageUrl: url,
+      placeholder: (context, url) => const SizedBox(
+        height: 200,
+        child: CustomCircleIndicator(),
+      ),
+      errorWidget: (context, url, error) => const Icon(Icons.error),
     );
   }
 }
