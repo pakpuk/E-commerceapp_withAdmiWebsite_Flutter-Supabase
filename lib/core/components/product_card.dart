@@ -23,23 +23,25 @@ class ProductCard extends StatelessWidget {
           Stack(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(12),
                   bottomRight: Radius.circular(12),
                   bottomLeft: Radius.circular(12),
                 ),
                 child: CachedNetworkImage(
                   imageUrl: "url",
-                  placeholder: (context, url) =>
-                      SizedBox(height: 200, child: CustomCircleIndicator()),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
+                  placeholder: (context, url) => const SizedBox(
+                    height: 200,
+                    child: CustomCircleIndicator(),
+                  ),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
               ),
               Positioned(
                 child: Container(
                   height: 52,
                   width: 72,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(8),
                       topRight: Radius.circular(8),
