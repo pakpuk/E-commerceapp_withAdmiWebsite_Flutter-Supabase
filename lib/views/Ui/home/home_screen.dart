@@ -39,7 +39,8 @@ class HomeScreen extends StatelessWidget {
             height: 12,
           ),
           ListView.builder(
-            scrollDirection: Axis.horizontal,
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
             itemCount: 2,
             itemBuilder: (context, index) {
               return ProductCard(isfavorite: false, onTap: () {});
