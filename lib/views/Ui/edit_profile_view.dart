@@ -26,7 +26,7 @@ class EditProfileView extends StatelessWidget {
           "Edit Name",
           style: TextStyle(
             color: AppColors.kWhiteColor,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w500,
             fontSize: 22,
           ),
         ),
