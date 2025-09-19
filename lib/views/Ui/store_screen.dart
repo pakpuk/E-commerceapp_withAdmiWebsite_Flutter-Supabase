@@ -28,7 +28,9 @@ class StoreScreen extends StatelessWidget {
             const SizedBox(
               height: 18,
             ),
-            const ProudctList()
+            ProudctList(
+              onTap: () {},
+            )
           ],
         ),
       ),
