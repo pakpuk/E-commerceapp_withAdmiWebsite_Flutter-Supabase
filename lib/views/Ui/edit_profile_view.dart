@@ -1,6 +1,8 @@
 import 'package:ecom_app/core/app_colors.dart';
 import 'package:ecom_app/core/components/TextFormfield_widget.dart';
 import 'package:ecom_app/core/components/button_widget.dart';
+import 'package:ecom_app/core/extensions/navigator_route.dart';
+import 'package:ecom_app/views/Ui/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class EditProfileView extends StatelessWidget {
@@ -11,9 +13,14 @@ class EditProfileView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        leading: const Icon(
-          Icons.arrow_back_ios,
-          color: AppColors.kWhiteColor,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: AppColors.kWhiteColor,
+          ),
+          onPressed: () {
+            context.pop(const ProfileScreen());
+          },
         ),
         title: const Text(
           "Edit Name",
