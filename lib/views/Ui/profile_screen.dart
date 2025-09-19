@@ -30,6 +30,14 @@ class ProfileScreen extends StatelessWidget {
                       size: 52,
                     ),
                   ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text("Mohammed"),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text("user@gmail.com"),
                   const SizedBox(
                     height: 18,
                   ),
