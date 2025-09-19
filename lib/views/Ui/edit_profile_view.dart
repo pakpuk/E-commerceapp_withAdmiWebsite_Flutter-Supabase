@@ -1,9 +1,11 @@
 import 'package:ecom_app/core/app_colors.dart';
+import 'package:ecom_app/core/components/TextFormfield_widget.dart';
+import 'package:ecom_app/core/components/button_widget.dart';
 import 'package:flutter/material.dart';
 
 class EditProfileView extends StatelessWidget {
-  const EditProfileView({super.key});
-
+  EditProfileView({super.key});
+  final TextEditingController editnamecontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +15,36 @@ class EditProfileView extends StatelessWidget {
           Icons.arrow_back_ios,
           color: AppColors.kWhiteColor,
         ),
-        title: Text("Edit Name"),
+        title: const Text(
+          "Edit Name",
+          style: TextStyle(
+            color: AppColors.kWhiteColor,
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+          ),
+        ),
+      ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: [
+              TextformfieldCustomWidget(
+                hintText: 'Enter Name',
+                ispassword: false,
+                controller: editnamecontroller,
+              ),
+              const SizedBox(
+                height: 12,
+              ),
+              CustomBtnWidget(
+                  width: 300,
+                  backgroundColor: AppColors.kPrimaryColor,
+                  onTap: () {},
+                  title: 'Update name')
+            ],
+          ),
+        ),
       ),
     );
   }
