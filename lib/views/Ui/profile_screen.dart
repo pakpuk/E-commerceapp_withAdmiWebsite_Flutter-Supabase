@@ -1,5 +1,7 @@
 import 'package:ecom_app/core/app_colors.dart';
 import 'package:ecom_app/core/components/profile_option.dart';
+import 'package:ecom_app/core/extensions/navigator_route.dart';
+import 'package:ecom_app/views/Ui/edit_profile_view.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -44,7 +46,9 @@ class ProfileScreen extends StatelessWidget {
                         height: 18,
                       ),
                       ProfileOptionWidget(
-                          onTap: () {},
+                          onTap: () {
+                            context.push(EditProfileView());
+                          },
                           icon: Icons.person,
                           optiooonTitle: 'Edit Name'),
                       const SizedBox(
