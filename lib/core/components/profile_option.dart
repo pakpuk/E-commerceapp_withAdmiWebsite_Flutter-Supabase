@@ -25,21 +25,25 @@ class ProfileOptionWidget extends StatelessWidget {
             Radius.circular(12),
           ),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Icon(
-              icon,
-              color: AppColors.kWhiteColor,
-            ),
-            Text(optiooonTitle,
-                style: TextStyle(
-                    fontWeight: FontWeight.w600, color: AppColors.kWhiteColor)),
-            const Icon(
-              Icons.arrow_forward_ios,
-              color: AppColors.kWhiteColor,
-            )
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Icon(
+                icon,
+                color: AppColors.kWhiteColor,
+              ),
+              Text(optiooonTitle,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.kWhiteColor)),
+              const Icon(
+                Icons.arrow_forward_ios,
+                color: AppColors.kWhiteColor,
+              )
+            ],
+          ),
         ),
       ),
     );
